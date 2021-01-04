@@ -1,0 +1,30 @@
+{
+	"title": "输入框",
+	"type": "object",
+	"description": "输入框组件",
+	"const": "el-input",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "输入框属性",
+			"properties": {
+				"size": {
+					"title": "尺寸",
+					"type": "string",
+					"enum": ["medium", "small", "mini"],
+					"default": "small"
+				},
+				"type": {
+					"title": "类型",
+					"type": "string",
+					"enum": ["text", "textarea"]
+				},
+
+				"disabled": {
+					"title": "是否禁用状态",
+					"type": "boolean"
+				}
+			}
+		}
+	}
+}

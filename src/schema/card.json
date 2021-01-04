@@ -1,0 +1,35 @@
+{
+	"title": "卡片",
+	"type": "object",
+	"description": "卡片组件",
+	"const": "el-card",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "卡片属性",
+			"properties": {
+				"shadow": {
+					"title": "设置阴影显示时机",
+					"type": "string",
+					"enum": ["always", "hover", "never"],
+					"enumNames": ["总是", "悬停", "从不"]
+				}
+			}
+		},
+		"slot": {
+			"type": "object",
+			"title": "默认内容区",
+			"description": "默认插槽",
+			"properties": {
+				"default": {
+					"title": "内容",
+					"type": "array"
+				},
+				"header": {
+					"title": "头部",
+					"type": "array"
+				}
+			}
+		}
+	}
+}

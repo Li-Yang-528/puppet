@@ -1,0 +1,71 @@
+{
+	"title": "按钮",
+	"type": "el-button",
+	"description": "按钮组件",
+	"const": "el-button",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "按钮属性",
+			"properties": {
+				"size": {
+					"title": "尺寸",
+					"type": "string",
+					"enum": ["medium", "small", "mini"],
+					"enumNames": ["中型","小型","迷你"],
+					"default": "small"
+				},
+				"type": {
+					"title": "类型",
+					"type": "string",
+					"enum": ["primary", "success", "warning", "danger", "info", "text"],
+					"enumNames": ["主要", "成功", "警告", "危险", "信息", "文本"]
+				},
+				"plain": {
+					"title": "是否朴素按钮",
+					"type": "boolean"
+				},
+
+				"round": {
+					"title": "是否圆角按钮",
+					"type": "boolean"
+				},
+
+				"circle": {
+					"title": "是否圆形按钮",
+					"type": "boolean"
+				},
+
+				"loading": {
+					"title": "是否加载中状态",
+					"type": "boolean"
+				},
+
+				"disabled": {
+					"title": "是否禁用状态",
+					"type": "boolean"
+				},
+
+				"icon": {
+					"title": "图标类名",
+					"type": "string"
+				},
+
+				"autofocus": {
+					"title": "是否默认聚焦",
+					"type": "boolean"
+				},
+				"native-type": {
+					"title": "原生 type 属性",
+					"type": "string",
+					"enum": ["button", "submit", "reset"],
+					"enumNames": ["按钮", "提交", "重置"]
+				}
+			}
+		},
+		"slot": {
+			"type": "string",
+			"title": "按钮"
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"title": "标签页",
+	"type": "object",
+	"description": "标签页组件",
+	"const": "el-tabs",
+	"properties": {
+		"props": {
+			"type": "object",
+			"description": "标签属性",
+			"properties": {
+				"value": {
+					"title": "绑定值",
+					"type": "string",
+					"default": "1"
+				},
+				"type": {
+					"title": "风格类型",
+					"type": "string",
+					"enum": ["card", "border-card"],
+					"default": "border-card"
+				},
+				"closable": {
+					"title": "标签是否可关闭",
+					"type": "boolean"
+				},
+
+				"addable": {
+					"title": "标签是否可增加",
+					"type": "boolean"
+				},
+
+				"tabPosition": {
+					"title": "选项卡所在位置",
+					"type": "string",
+					"enum": ["top", "right", "bottom", "left"],
+					"default": "top"
+				},
+
+				"stretch": {
+					"title": "标签的宽度是否自撑开",
+					"type": "boolean"
+				}
+			}
+		},
+		"slot": {
+			"type": "array",
+            "items": {
+                "title": "标签子项",
+                "type": "object",
+                "description": "标签子项组件",
+                "const": "el-tab-pane",
+                "properties": {
+                    "props": {
+                        "type": "object",
+                        "description": "标签子项属性",
+                        "properties": {
+                            "label": {
+                                "title": "选项卡标题",
+                                "type": "string",
+                                "default": "标签{index}"
+                            },
+                            "disabled": {
+                                "title": "是否禁用",
+                                "type": "boolean",
+                                "default": false
+                            },
+
+                            "name": {
+                                "title": "选项卡别名",
+                                "type": "string",
+                                "default": "{index}"
+                            },
+
+                            "closable": {
+                                "title": "标签是否可关闭",
+                                "type": "boolean"
+                            },
+
+                            "lazy": {
+                                "title": "标签是否延迟渲染",
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
