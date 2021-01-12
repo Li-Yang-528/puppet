@@ -50,7 +50,7 @@ function toOption(values = [], labels = []) {
     }))
 }
 
-function parseBody( slot = {} ) { 
+function parseBody( slot = {}, parent ) { 
     const {
         properties = {},
         type,
@@ -64,12 +64,12 @@ function parseBody( slot = {} ) {
 
     // 默认插槽，如纯文字
     if (type === 'string') { 
-        children.push( def || title || description) 
+        children.push( def || title || description ) 
     };
 
     // 如果是数组类型意味着子组件均相同，如tabs和tab-pane
-    if ( type === 'array' && items) { 
-        children.push( parse( items ))
+    if ( type === 'array' && items ) { 
+        children.push( parse( items ) )
     }
 
     // 如果是对象说明是有具名插槽，分别插入

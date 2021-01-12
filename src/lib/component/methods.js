@@ -1,8 +1,7 @@
 import store from '../store';
 
-export default function ( type = 'nativeOn', node ) {
-    const event = {};
-    event[ type ] = {
+export default function initEvent(node) { 
+    return {
         dragstart( e ) {
             e.stopPropagation();
             store.commit(
@@ -13,6 +12,7 @@ export default function ( type = 'nativeOn', node ) {
 
         dragenter( e ) {
             e.stopPropagation();
+            e.preventDefault();
             store.commit(
                 'setTo',
                 node
@@ -31,6 +31,7 @@ export default function ( type = 'nativeOn', node ) {
 
         drop( e ) {
             e.stopPropagation();
+            e.preventDefault();
             store.commit(
                 'append'
             )
@@ -43,5 +44,4 @@ export default function ( type = 'nativeOn', node ) {
             )
         }
     }
-    return event;
 }

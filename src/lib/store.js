@@ -39,13 +39,11 @@ Store.prototype.mutations = {
     },
 
     append() { 
-        this.states.to.body.push(
-            clone( this.states.from )
-        );
-    },
+        const { from, to } = this.states;
+        const cloneNode = clone( this.states.from );
+        const index = this.states.to.body.push( cloneNode );
 
-    setActive( active ) { 
-        this.states.active = active;
+        cloneNode.path = to.path + '/' + index  
     },
 
     appendTo(path, active, toIdx, fromIdx) { 

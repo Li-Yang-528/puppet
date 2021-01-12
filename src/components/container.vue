@@ -1,12 +1,6 @@
 <template>
     <el-main>
-        <drop
-        v-for="(item, index) in list "
-        :key='item.name + index'
-        :item='item'
-        >
-
-        </drop>
+        <Drop :data='page' />
     </el-main>
 </template>
 
@@ -18,8 +12,8 @@ export default {
     components: { Drop },
 
     computed: {
-        list() {
-            return [store.states.page];
+        page() {
+            return store.states.page;
         }
     }
 }

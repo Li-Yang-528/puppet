@@ -25,7 +25,7 @@
 
 <script>
 import getAllComponent from '@/lib/schema'
-import { Drag } from '@/lib/component'
+import {Drag} from '@/lib/component'
 export default {
     components: {
         Drag
